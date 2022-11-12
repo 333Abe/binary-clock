@@ -6,50 +6,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Binary Clock</title>
     <link rel="stylesheet" href="styles.css">
-    <script type="text/javascript" src="bin-clock.js"></script>
+    
 </head>
 <body>
+    <!-- <script src="bin-clock.js"></script> -->
     <div id="clock-outer">
         <div id="hours" class="container">
             <div class="column">
-                <div class="block hours-10s-ten">hours 10</div>
-                <div class="block hours-10s-twenty">hours 20</div>
+                <div id="hour10" class="block">hours 10</div>
+                <div id="hour20" class="block">hours 20</div>
             </div>
             <div class="column">
-                <div class="block hours-units-one hours-units-three hours-units-five hours-units-seven hours-units-nine">hours 1</div>
-                <div class="block hours-units-two hours-units-three hours-units-six hours-units-seven">hours 2</div>
-                <div class="block hours-units-four hours-units-five hours-units-six hours-units-seven">hours 4</div>
-                <div class="block hours-units-eight hours-units-nine">hours 8</div>
+                <div id="hour1" class="block">hours 1</div>
+                <div id="hour2" class="block">hours 2</div>
+                <div id="hour4" class="block">hours 4</div>
+                <div id="hour8" class="block">hours 8</div>
             </div>
         </div>
         <div id="minutes" class="container">
             <div class="column">
-                <div class="block minutes-10s-ten minutes-10s-thirty minutes-10s-fifty">mins 10</div>
-                <div class="block minutes-10s-twenty minutes-10s-thirty">mins 20</div>
-                <div class="block minutes-10s-forty minutes-10s-fifty">mins 40</div>
+                <div id="min10" class="block">mins 10</div>
+                <div id="min20" class="block">mins 20</div>
+                <div id="min40" class="block">mins 40</div>
             </div>
             <div class="column">
-                <div class="block minutes-units-one minutes-units-three minutes-units-five minutes-units-seven minutes-units-nine">mins 1</div>
-                <div class="block minutes-units-two minutes-units-three minutes-units-six minutes-units-seven">mins 2</div>
-                <div class="block minutes-units-four minutes-units-five minutes-units-six minutes-units-seven">mins 4</div>
-                <div class="block minutes-units-eight minutes-units-nine">mins 8</div>
+                <div id="min1" class="block">mins 1</div>
+                <div id="min2" class="block">mins 2</div>
+                <div id="min4" class="block">mins 4</div>
+                <div id="min8" class="block">mins 8</div>
             </div>
         </div>
         <div id="seconds" class="container">
             <div class="column">
-                <div class="block seconds-10s-ten seconds-10s-thirty seconds-10s-fifty">secs 10</div>
-                <div class="block seconds-10s-twenty seconds-10s-thirty">secs 20</div>
-                <div class="block seconds-10s-forty seconds-10s-fifty">secs 40</div>
+                <div id="sec10" class="block">secs 10</div>
+                <div id="sec20" class="block">secs 20</div>
+                <div id="sec40" class="block">secs 40</div>
             </div>
             
             <div class="column">
-                <div class="block seconds-units-one seconds-units-three seconds-units-five seconds-units-seven seconds-units-nine">secs 1</div>
-                <div class="block seconds-units-two seconds-units-three seconds-units-six seconds-units-seven">secs 2</div>
-                <div class="block seconds-units-four seconds-units-five seconds-units-six seconds-units-seven">secs 4</div>
-                <div class="block seconds-units-eight seconds-units-nine">secs 8</div>
+                <div id="sec1" class="block">secs 1</div>
+                <div id="sec2" class="block">secs 2</div>
+                <div id="sec4" class="block">secs 4</div>
+                <div id="sec8" class="block">secs 8</div>
             </div>
-            
         </div>
     </div>
+    <script>const seconds1 = document.getElementById("sec1");
+        seconds1.style.backgroundColor = "#00FF00";</script>
 </body>
 </html>

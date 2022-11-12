@@ -2,7 +2,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: burlywood;
+    background-color: rgb(222, 184, 135);
 }
 
 #clock-outer {
@@ -19,7 +19,7 @@ body {
     justify-content: space-around;
     align-items: end;
     flex-direction: row;
-    border: 5px solid red;
+    border: 5px solid rgb(255, 0, 0);
     width: 15vw;
     height: 60vh;
 }
