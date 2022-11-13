@@ -2,14 +2,13 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(222, 184, 135);
+    background-color: rgba(121, 115, 202, 0.521);
 }
 
 #clock-outer {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    border: 5px solid blue;
     width: 60vw;
     height: 80vh;
 }
@@ -19,7 +18,6 @@ body {
     justify-content: space-around;
     align-items: end;
     flex-direction: row;
-    border: 5px solid rgb(255, 0, 0);
     width: 15vw;
     height: 60vh;
 }
@@ -33,7 +31,7 @@ body {
     width: 10vh;
     height: 10vh;
     border: 5px solid black;
-    /*border-radius: 50px;*/
+    border-radius: 50px;
     margin: 1vh 1vw 1vh 1vw;
 }
 

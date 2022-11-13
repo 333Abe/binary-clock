@@ -1,140 +1,213 @@
-// const hours10 = document.getElementsByClassName("hours-10s-ten");
-// const hours20 = document.getElementsByClassName("hours-10s-twenty");
-// const hours1 = document.getElementsByClassName("hours-units-one");
-// const hours2 = document.getElementsByClassName("hours-units-two");
-// const hours3 = document.getElementsByClassName("hours-units-three");
-// const hours4 = document.getElementsByClassName("hours-units-four");
-// const hours5 = document.getElementsByClassName("hours-units-five");
-// const hours6 = document.getElementsByClassName("hours-units-six");
-// const hours7 = document.getElementsByClassName("hours-units-seven");
-// const hours8 = document.getElementsByClassName("hours-units-eight");
-// const hours9 = document.getElementsByClassName("hours-units-nine");
+const hour10 = document.getElementById("hour10");
+const hour20 = document.getElementById("hour20");
+const hour1 = document.getElementById("hour1");
+const hour2 = document.getElementById("hour2");
+const hour4 = document.getElementById("hour4");
+const hour8 = document.getElementById("hour8");
+const min10 = document.getElementById("min10");
+const min20 = document.getElementById("min20");
+const min40 = document.getElementById("min40");
+const min1 = document.getElementById("min1");
+const min2 = document.getElementById("min2");
+const min4 = document.getElementById("min4");
+const min8 = document.getElementById("min8");
+const sec10 = document.getElementById("sec10");
+const sec20 = document.getElementById("sec20");
+const sec40 = document.getElementById("sec40");
+const sec1 = document.getElementById("sec1");
+const sec2 = document.getElementById("sec2");
+const sec4 = document.getElementById("sec4");
+const sec8 = document.getElementById("sec8");
 
-// const minutes10 = document.getElementsByClassName("minutes-10s-ten");
-// const minutes20 = document.getElementsByClassName("minutes-10s-twenty");
-// const minutes30 = document.getElementsByClassName("minutes-10s-thirty");
-// const minutes40 = document.getElementsByClassName("minutes-10s-forty");
-// const minutes50 = document.getElementsByClassName("minutes-10s-fifty");
-// const minutes1 = document.getElementsByClassName("minutes-units-one");
-// const minutes2 = document.getElementsByClassName("minutes-units-two");
-// const minutes3 = document.getElementsByClassName("minutes-units-three");
-// const minutes4 = document.getElementsByClassName("minutes-units-four");
-// const minutes5 = document.getElementsByClassName("minutes-units-five");
-// const minutes6 = document.getElementsByClassName("minutes-units-six");
-// const minutes7 = document.getElementsByClassName("minutes-units-seven");
-// const minutes8 = document.getElementsByClassName("minutes-units-eight");
-// const minutes9 = document.getElementsByClassName("minutes-units-nine");
+function hoursTens(num) {
+    switch (num) {
+        case "0":
+            offOn("transparent", hour10, hour20, hour40)
+            break;
+        case "1":
+            offOn("green", hour10)
+            break;
+        case "2":
+            offOn("green", hour20)
+            break;
+    }
+}
 
-// const seconds10 = document.getElementsByClassName("seconds-10s-ten");
-// const seconds20 = document.getElementsByClassName("seconds-10s-twenty");
-// const seconds30 = document.getElementsByClassName("seconds-10s-thirty");
-// const seconds40 = document.getElementsByClassName("seconds-10s-forty");
-// const seconds50 = document.getElementsByClassName("seconds-10s-fifty");
-// const seconds1 = document.getElementsByClassName("seconds-units-one");
-// const seconds2 = document.getElementsByClassName("seconds-units-two");
-// const seconds3 = document.getElementsByClassName("seconds-units-three");
-// const seconds4 = document.getElementsByClassName("seconds-units-four");
-// const seconds5 = document.getElementsByClassName("seconds-units-five");
-// const seconds6 = document.getElementsByClassName("seconds-units-six");
-// const seconds7 = document.getElementsByClassName("seconds-units-seven");
-// const seconds8 = document.getElementsByClassName("seconds-units-eight");
-// const seconds9 = document.getElementsByClassName("seconds-units-nine");
+function hoursUnits(num) {
+    switch (num) {
+        case "0":
+            offOn("transparent", hour1, hour2, hour4, hour8)
+            break;
+        case "1":
+            offOn("green", hour1)
+            break;
+        case "2":
+            offOn("green", hour2)
+            break;
+        case "3":
+            offOn("green", hour1, hour2)
+            break;
+        case "4":
+            offOn("green", hour4)
+            break;
+        case "5":
+            offOn("green", hour1, hour4)
+            break;
+        case "6":
+            offOn("green", hour2, hour4)
+            break;
+        case "7":
+            offOn("green", hour1, hour2, hour4)
+            break;
+        case "8":
+            offOn("green", hour8)
+            break;
+        case "9":
+            offOn("green", hour1, hour8)
+            break;
+    }
+}
 
-const seconds1 = document.getElementById("sec1");
-seconds1.style.backgroundColor = "#00FF00";       
+function minutesTens(num) {
+    switch (num) {
+        case "0":
+            offOn("transparent", min10, min20, min40)
+            break;
+        case "1":
+            offOn("green", min10)
+            break;
+        case "2":
+            offOn("green", min20)
+            break;
+        case "3":
+            offOn("green", min10, min20)
+            break;
+        case "4":
+            offOn("green", min40)
+            break;
+        case "5":
+            offOn("green", min10, min40)
+            break;
+    }
+}
 
-// let now = new Date().toString();
+function minutesUnits(num) {
+    switch (num) {
+        case "0":
+            offOn("transparent", min1, min2, min4, min8)
+            break;
+        case "1":
+            offOn("green", min1)
+            break;
+        case "2":
+            offOn("green", min2)
+            break;
+        case "3":
+            offOn("green", min1, min2)
+            break;
+        case "4":
+            offOn("green", min4)
+            break;
+        case "5":
+            offOn("green", min1, min4)
+            break;
+        case "6":
+            offOn("green", min2, min4)
+            break;
+        case "7":
+            offOn("green", min1, min2, min4)
+            break;
+        case "8":
+            offOn("green", min8)
+            break;
+        case "9":
+            offOn("green", min1, min8)
+            break;
+    }
+}
 
-// numHour1 = [...now][16];
-// numHour2 = [...now][17];
-// numMin1 = [...now][19];
-// numMin2 = [...now][20];
-// numSec1 = [...now][22];
-// numSec2 = [...now][23];
+function secondsTens(num) {
+    switch (num) {
+        case "0":
+            offOn("transparent", sec10, sec20, sec40)
+            break;
+        case "1":
+            offOn("green", sec10)
+            break;
+        case "2":
+            offOn("green", sec20)
+            break;
+        case "3":
+            offOn("green", sec10, sec20)
+            break;
+        case "4":
+            offOn("green", sec40)
+            break;
+        case "5":
+            offOn("green", sec10, sec40)
+            break;
+    }
+}
 
-//console.log(`${numHour1}${numHour2}:${numMin1}${numMin2}:${numSec1}${numSec2}`)
- 
+function secondsUnits(num) {
+    switch (num) {
+        case "0":
+            offOn("transparent", sec1, sec2, sec4, sec8)
+            break;
+        case "1":
+            offOn("green", sec1)
+            break;
+        case "2":
+            offOn("green", sec2)
+            break;
+        case "3":
+            offOn("green", sec1, sec2)
+            break;
+        case "4":
+            offOn("green", sec4)
+            break;
+        case "5":
+            offOn("green", sec1, sec4)
+            break;
+        case "6":
+            offOn("green", sec2, sec4)
+            break;
+        case "7":
+            offOn("green", sec1, sec2, sec4)
+            break;
+        case "8":
+            offOn("green", sec8)
+            break;
+        case "9":
+            offOn("green", sec1, sec8)
+            break;
+    }
+}
+    
 function sleep(milliseconds) {
     const initialisedTime = Date.now();
     do {
     } while (Date.now() - initialisedTime < milliseconds)
 }
 
-function offOn(element, colour) {
-    element.style.backgroundColor = colour;
+function offOn(colour, ...elements) {
+    for (let i = 0; i < elements.length; i++) {
+        elements[i].style.backgroundColor = colour;
+    }
 }
 
-function switcher(obj, num) {
-    return obj[num]
-}
-
-// const hoursTens = {1: offOn(hours10, rgb(255, 0, 0)), 
-//     2: offOn(hours20, rgb(255, 0, 0))}
-// const hoursUnits = {1: offOn(hours1, rgb(255, 0, 0)), 
-//     2: offOn(hours2, rgb(255, 0, 0)), 
-//     3: offOn(hours3, rgb(255, 0, 0)), 
-//     4: offOn(hours4, rgb(255, 0, 0)), 
-//     5: offOn(hours5, rgb(255, 0, 0)), 
-//     6: offOn(hours6, rgb(255, 0, 0)), 
-//     7: offOn(hours7, rgb(255, 0, 0)), 
-//     8: offOn(hours8, rgb(255, 0, 0)), 
-//     9: offOn(hours9, rgb(255, 0, 0))}
-// const minutesTens = {1: offOn(minutes1, rgb(255, 0, 0)), 
-//     2: offOn(minutes2, rgb(255, 0, 0)), 
-//     3: offOn(minutes3, rgb(255, 0, 0)), 
-//     4: offOn(minutes4, rgb(255, 0, 0)), 
-//     5: offOn(minutes5, rgb(255, 0, 0))}
-// const minutesUnits = {1: offOn(minutes1, rgb(255, 0, 0)), 
-//     2: offOn(minutes2, rgb(255, 0, 0)), 
-//     3: offOn(minutes3, rgb(255, 0, 0)), 
-//     4: offOn(minutes4, rgb(255, 0, 0)), 
-//     5: offOn(minutes5, rgb(255, 0, 0)), 
-//     6: offOn(minutes6, rgb(255, 0, 0)), 
-//     7: offOn(minutes7, rgb(255, 0, 0)), 
-//     8: offOn(minutes8, rgb(255, 0, 0)), 
-//     9: offOn(minutes9, rgb(255, 0, 0))}
-// const secondsTens = {1: offOn(seconds1, rgb(255, 0, 0)), 
-//     2: offOn(seconds2, rgb(255, 0, 0)), 
-//     3: offOn(seconds3, rgb(255, 0, 0)), 
-//     4: offOn(seconds4, rgb(255, 0, 0)), 
-//     5: offOn(seconds5, rgb(255, 0, 0))}
-// const secondsUnits = {1: offOn(seconds1, rgb(255, 0, 0)), 
-    // 2: offOn(seconds2, rgb(255, 0, 0)), 
-    // 3: offOn(seconds3, rgb(255, 0, 0)), 
-    // 4: offOn(seconds4, rgb(255, 0, 0)), 
-    // 5: offOn(seconds5, rgb(255, 0, 0)), 
-    // 6: offOn(seconds6, rgb(255, 0, 0)), 
-    // 7: offOn(seconds7, rgb(255, 0, 0)), 
-    // 8: offOn(seconds8, rgb(255, 0, 0)), 
-    // 9: offOn(seconds9, rgb(255, 0, 0))}
-
-// const test = {1: testFunc("this works")}
-
-// function testFunc(str) {
-//     console.log(str)
-// }
-
-// function something(){
-//     return test[1]
-// }
-
-// something()
-// let isOn = False
-
-// while (true) {
-//     // let now = new Date().toString();
-//     // numHour1 = [...now][16];
-//     // numHour2 = [...now][17];
-//     // numMin1 = [...now][19];
-//     // numMin2 = [...now][20];
-//     // numSec1 = [...now][22];
-//     // numSec2 = [...now][23];
-//     // switcher(secondsUnits, numSec2)
-//     if (!isOn) {
-//         offOn(seconds1, "#00FF00")
-//     } else {
-//         offOn(seconds1, "red")
-//     }
-//     sleep(1000)
-
-// }
+let now = new Date().toString();
+numHour1 = [...now][16];
+numHour2 = [...now][17];
+numMin1 = [...now][19];
+numMin2 = [...now][20];
+numSec1 = [...now][22];
+numSec2 = [...now][23];
+hoursTens(numHour1)
+hoursUnits(numHour2)
+minutesTens(numMin1)
+minutesUnits(numMin2)
+secondsTens(numSec1)
+secondsUnits(numSec2)
+sleep(1000)
+location.reload()
