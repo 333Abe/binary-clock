@@ -1,0 +1,36 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(121, 115, 202, 0.521);
+}
+
+#clock-outer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 60vw;
+    height: 80vh;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: end;
+    flex-direction: row;
+    width: 15vw;
+    height: 60vh;
+}
+
+.column {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.block {
+    width: 10vh;
+    height: 10vh;
+    border: 5px solid black;
+    border-radius: 50px;
+    margin: 1vh 1vw 1vh 1vw;
+}
